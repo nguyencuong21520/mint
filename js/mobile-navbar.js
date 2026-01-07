@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenu = document.getElementById('mobile-menu');
     const body = document.body;
     const navLinks = document.querySelectorAll('.js-nav-link');
+    const scrollLinks = document.querySelectorAll('.js-scroll-link');
 
     function openMobileMenu() {
         if (!mobileMenu) return;
@@ -32,28 +33,40 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Smooth scroll for all nav links (desktop + mobile)
+    function smoothScrollToTarget(targetId, event) {
+        if (!targetId) return;
+        const targetEl = document.getElementById(targetId);
+        if (!targetEl) return;
+
+        if (event) event.preventDefault();
+
+        const headerOffset = 80; // approximate header height
+        const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
+        const offsetPosition = elementPosition - headerOffset;
+
+        window.scrollTo({
+            top: offsetPosition,
+            behavior: 'smooth'
+        });
+
+        closeMobileMenu();
+    }
+
+    // Smooth scroll for nav links (desktop + mobile)
     navLinks.forEach(link => {
         link.addEventListener('click', (e) => {
             const href = link.getAttribute('href');
             if (!href || !href.startsWith('#')) return;
             const targetId = href.substring(1);
-            const targetEl = document.getElementById(targetId);
+            smoothScrollToTarget(targetId, e);
+        });
+    });
 
-            if (targetEl) {
-                e.preventDefault();
-                const headerOffset = 80; // approximate header height
-                const elementPosition = targetEl.getBoundingClientRect().top + window.pageYOffset;
-                const offsetPosition = elementPosition - headerOffset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: 'smooth'
-                });
-            }
-
-            // Close mobile menu after navigating
-            closeMobileMenu();
+    // Smooth scroll for CTA buttons with data-scroll-target
+    scrollLinks.forEach(link => {
+        link.addEventListener('click', (e) => {
+            const targetId = (link.getAttribute('data-scroll-target') || '').replace('#', '');
+            smoothScrollToTarget(targetId, e);
         });
     });
 
