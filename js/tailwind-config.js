@@ -22,6 +22,7 @@
                     fontFamily: {
                         "display": ["Plus Jakarta Sans", "sans-serif"],
                         "cute": ["Quicksand", "sans-serif"],
+                        "cute-display": ["Mali", "cursive"],
                     },
                     borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "2xl": "4rem", "full": "9999px"},
                     boxShadow: {

@@ -35,14 +35,17 @@ document.addEventListener('DOMContentLoaded', () => {
         if (currentValue !== formattedValue) {
             element.innerText = formattedValue;
             
-            // Remove animation class to reset it
-            element.classList.remove('tick-animation');
+            // Animate parent element (the card)
+            const card = element.parentElement;
             
-            // Trigger reflow to restart animation
-            void element.offsetWidth; 
+            // Remove animation class to reset it
+            card.classList.remove('tick-border');
+            
+            // Trigger reflow
+            void card.offsetWidth;
             
             // Add animation class
-            element.classList.add('tick-animation');
+            card.classList.add('tick-border');
         }
     }
 
