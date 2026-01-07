@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const wishesData = [
     {
       name: "Anh Bơ Đẹp Zai",
-      message:
-        "Chúc bé Mint hay ăn chóng lớn, luôn vui vẻ và ngoan ngoãn nhé! Yêu con nhiều ❤️",
+      message: "Chúc em Mint hay ăn chóng lớn, luôn vui vẻ và ngoan ngoãn nhé!",
       image: "./assets/images/bo.png",
       type: "Friend",
       typeColor: "text-blue-600",
