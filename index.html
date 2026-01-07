@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html class="light" lang="vi"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Mừng Sinh Nhật Bé Mint</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#89CFF0", // Baby Blue
+                        "primary-hover": "#7AB8D6",
+                        "primary-soft": "#E0F7FA",
+                        "background-light": "#FFFEF5", // Creamy white
+                        "background-dark": "#1a1a2e",
+                        "secondary-pink": "#FFDAB9", // Peach Puff / Light Peach
+                        "secondary-cream": "#FFFDD0", // Cream
+                        "mint-accent": "#B2F7EF", // Minty blue
+                        "pastel-green": "#A8E6CF", // Soft pastel green for leaves
+                        "pastel-purple": "#E6E6FA", // Lavender
+                        "pastel-blue": "#D6EAF8",
+                        "pastel-yellow": "#FFFACD", // Lemon Chiffon
+                        "text-main": "#5D6D7E",
+                        "text-heading": "#2E4053",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"],
+                        "cute": ["Quicksand", "sans-serif"],
+                    },
+                    borderRadius: {"DEFAULT": "1rem", "lg": "2rem", "xl": "3rem", "2xl": "4rem", "full": "9999px"},
+                    boxShadow: {
+                        'soft': '0 10px 40px -10px rgba(137, 207, 240, 0.2)',
+                        'card': '0 0 0 1px rgba(0,0,0,0.03), 0 2px 8px rgba(0,0,0,0.04)',
+                    }
+                },
+            },
+        }
+    </script>
+<link href="css/style.css" rel="stylesheet"/>
+<style>
+        .bg-dots {
+            background-image: radial-gradient(#89CFF0 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.3;
+        }
+        .tilt-card:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+        .tilt-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+        .tilt-card:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+        }
+        .blob-shape {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        }@keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main dark:text-pastel-blue font-display min-h-screen flex flex-col relative overflow-x-hidden">
+<div class="absolute inset-0 z-0 bg-dots pointer-events-none"></div>
+<div class="absolute top-0 right-0 w-[500px] h-[500px] bg-primary/10 rounded-full blur-[100px] -translate-y-1/2 translate-x-1/2 z-0 pointer-events-none"></div>
+<div class="absolute bottom-0 left-0 w-[400px] h-[400px] bg-secondary-pink/20 rounded-full blur-[80px] translate-y-1/2 -translate-x-1/4 z-0 pointer-events-none"></div>
+<div class="relative z-10 border-b border-primary/10 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md sticky top-0">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<header class="flex items-center justify-between h-20">
+<div class="flex items-center gap-3">
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-primary-soft text-primary relative">
+<span class="material-symbols-outlined">cake</span>
+<span class="absolute -top-1 -right-1 text-pastel-green">
+<svg class="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path></svg>
+</span>
+</div>
+<h2 class="text-xl font-bold tracking-tight text-primary dark:text-primary-soft">Mint's 1st Birthday</h2>
+</div>
+<nav class="hidden md:flex gap-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Trang chủ</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#details">Thông tin</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#gallery">Thư viện ảnh</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#wishes">Lời chúc</a>
+</nav>
+<button class="hidden md:flex bg-primary hover:bg-primary-hover text-white px-6 py-2.5 rounded-full text-sm font-bold shadow-lg shadow-primary/20 transition-all hover:scale-105">
+                    Gửi Lời Chúc
+                </button>
+<button class="md:hidden p-2 text-gray-600">
+<span class="material-symbols-outlined">menu</span>
+</button>
+</header>
+</div>
+</div>
+<main class="relative z-10 flex-grow flex flex-col overflow-hidden">
+<div class="layout-container flex flex-col justify-center py-10 lg:py-20">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative">
+<div class="absolute -top-10 -left-10 lg:-left-20 w-24 h-24 text-secondary-pink/40 -rotate-12 hidden md:block animate-float">
+<svg class="w-full h-full drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24">
+<path d="M18.5,8c-1.2-1.8-2.5-2.8-4.5-2.8C11.5,5.2,9.2,7,8.2,9.2l-4.9-3l-2,3.3l5.2,3.1c-0.2,0.9-0.2,1.9,0.1,2.8 l-5.2,3.1l2,3.3l4.9-3c1,2.2,3.3,4,5.8,4c2,0,3.3-1,4.5-2.8l3.1,5.2l3.3-2l-3-4.9c0.9-2,0.9-4.4-0.1-6.3l3-4.9l-3.3-2 L18.5,8z M14,16.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8c2.7,0,4.8,2.2,4.8,4.8C18.8,14.6,16.7,16.8,14,16.8z"></path>
+</svg>
+</div>
+<div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20 relative">
+<div class="flex flex-col gap-6 text-center lg:text-left flex-1 relative z-10">
+<div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary-cream border border-yellow-200 self-center lg:self-start">
+<span class="material-symbols-outlined text-yellow-500 text-sm">favorite</span>
+<span class="text-yellow-600 text-sm font-bold">Mời bạn đến chung vui!</span>
+</div>
+<h1 class="text-5xl lg:text-7xl font-extrabold tracking-tight leading-[1.1] text-text-heading dark:text-white">
+                            Mừng Sinh Nhật <br/>
+<span class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary-pink relative inline-block">
+                                Bé Mint
+<span class="absolute -top-6 -right-8 w-10 h-10 text-pastel-green rotate-12 hidden sm:block">
+<svg class="w-full h-full drop-shadow-sm" fill="currentColor" viewBox="0 0 24 24">
+<path d="M21,3c-4.2,0-10.8,2.9-12.8,9c-2.6-1-5.6-0.6-7.2,1c-1.6,1.6-1.8,4.6-0.6,7.2c-0.2,0.5-0.4,1-0.4,1.8 c0,1.1,0.9,2,2,2c0.6,0,1.1-0.2,1.5-0.5c2.6,1.2,5.7,1,7.3-0.6c1.6-1.6,2-4.6,1-7.2C18,13.7,21,7.1,21,3z M7.5,19.1 c-1.2-1.2-1.3-3.4-0.3-5.3l5.6,5.6C10.9,20.4,8.7,20.3,7.5,19.1z"></path>
+</svg>
+</span>
+</span> 1 Tuổi
+                        </h1>
+<p class="text-lg text-text-main dark:text-gray-300 max-w-lg mx-auto lg:mx-0 leading-relaxed">
+                            Chào mừng đến với tiệc sinh nhật đầu tiên của bé Mint! Hãy cùng gia đình lưu giữ những khoảnh khắc đáng yêu và chia sẻ niềm vui trong ngày đặc biệt này nhé.
+                        </p>
+<div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
+<button class="bg-primary hover:bg-primary-hover text-white px-8 py-4 rounded-full text-base font-bold shadow-xl shadow-primary/25 transition-all hover:-translate-y-1 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">rsvp</span>
+                                Xác nhận tham dự
+                            </button>
+<button class="bg-white dark:bg-white/10 border border-gray-200 dark:border-white/10 hover:bg-gray-50 text-text-heading dark:text-white px-8 py-4 rounded-full text-base font-bold transition-all hover:-translate-y-1 flex items-center justify-center gap-2">
+<span class="material-symbols-outlined">photo_library</span>
+                                Xem ảnh bé
+                            </button>
+</div>
+</div>
+<div class="relative w-full max-w-[500px] flex-1">
+<div class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary-pink/30 rounded-full blur-3xl scale-90"></div>
+<div class="relative aspect-square rounded-full border-[12px] border-white dark:border-white/10 shadow-2xl overflow-hidden bg-cover bg-center" data-alt="Cute baby smiling in a pink outfit surrounded by soft light" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA0Yo9hk8-v33rxEwyeQy1Re0nYX4LplResZa38HoihqYosWGuXGP9drsa7o43QcbjH7CJyBcOurYyfKTm8fBPjeEcQsaFmSls6zlkGVQH2zZWQTfRl2LNrdy825EDsB3fbOiODzjwAheTAcbLgdh0GWiMOuo7-suXXWPmeFTt9yySlaHfYkoJjqkrNLB_l1alaypaQUGdDpx179w81MussWGkfLbMNJVj7ij59oPX1wTVEtYel4D-QP16NnoCKKuPwv252Kq8sYVQ");'>
+</div>
+<div class="absolute -bottom-6 -right-6 bg-white dark:bg-gray-800 p-4 rounded-3xl shadow-xl border border-gray-100 dark:border-gray-700 flex items-center gap-3 animate-bounce" style="animation-duration: 3s;">
+<div class="bg-primary-soft p-2 rounded-full text-primary">
+<span class="material-symbols-outlined">calendar_month</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 font-medium uppercase tracking-wider">Ngày vui</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">18/01/2026</p>
+</div>
+</div>
+<div class="absolute top-10 -left-10 bg-white dark:bg-gray-800 p-3 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700 hidden sm:flex items-center gap-2 transform -rotate-6">
+<span class="text-2xl">👑</span>
+<span class="font-bold text-secondary-pink">Little Princess</span>
+</div>
+<div class="absolute bottom-10 -left-6 w-12 h-12 text-pastel-green rotate-45 z-10 hidden sm:block animate-pulse">
+<svg class="w-full h-full drop-shadow-md" fill="currentColor" viewBox="0 0 24 24">
+<path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path>
+</svg>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-12 bg-white/50 dark:bg-white/5 backdrop-blur-sm border-y border-primary/5 relative">
+<div class="absolute top-4 left-10 w-8 h-8 text-pastel-yellow opacity-60 rotate-45 hidden sm:block">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+</div>
+<div class="absolute bottom-4 right-10 w-8 h-8 text-pastel-purple opacity-60 -rotate-12 hidden sm:block">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2L15 22L12 18L9 22L12 2Z"></path></svg>
+</div>
+<div class="max-w-4xl mx-auto px-4 relative z-10">
+<h3 class="text-center text-primary font-bold mb-8 uppercase tracking-widest text-sm flex items-center justify-center gap-2">
+<span class="material-symbols-outlined text-pastel-green">eco</span>
+                    Đếm ngược đến giờ thổi nến
+                    <span class="material-symbols-outlined text-pastel-green">eco</span>
+</h3>
+<div class="flex flex-wrap justify-center gap-4 sm:gap-8">
+<div class="flex flex-col items-center gap-2">
+<div class="w-20 h-24 sm:w-24 sm:h-28 bg-white dark:bg-gray-800 rounded-2xl shadow-md border-b-4 border-primary flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
+<span class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">12</span>
+</div>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Ngày</span>
+</div>
+<div class="flex flex-col items-center justify-center pt-2">
+<span class="text-2xl text-primary font-bold">:</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-20 h-24 sm:w-24 sm:h-28 bg-white dark:bg-gray-800 rounded-2xl shadow-md border-b-4 border-secondary-pink flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-secondary-pink/20 group-hover:bg-secondary-pink/30 transition-colors"></div>
+<span class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">05</span>
+</div>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Giờ</span>
+</div>
+<div class="flex flex-col items-center justify-center pt-2">
+<span class="text-2xl text-primary font-bold">:</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-20 h-24 sm:w-24 sm:h-28 bg-white dark:bg-gray-800 rounded-2xl shadow-md border-b-4 border-pastel-purple flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-pastel-purple/20 group-hover:bg-pastel-purple/30 transition-colors"></div>
+<span class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">30</span>
+</div>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Phút</span>
+</div>
+<div class="flex flex-col items-center justify-center pt-2">
+<span class="text-2xl text-primary font-bold">:</span>
+</div>
+<div class="flex flex-col items-center gap-2">
+<div class="w-20 h-24 sm:w-24 sm:h-28 bg-white dark:bg-gray-800 rounded-2xl shadow-md border-b-4 border-pastel-yellow flex items-center justify-center relative overflow-hidden group">
+<div class="absolute inset-0 bg-pastel-yellow group-hover:bg-yellow-100 transition-colors"></div>
+<span class="text-3xl sm:text-4xl font-black text-gray-900 dark:text-white">15</span>
+</div>
+<span class="text-sm font-medium text-gray-500 uppercase tracking-wide">Giây</span>
+</div>
+</div>
+</div>
+</div>
+<div class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative" id="details">
+<div class="text-center mb-16">
+<span class="bg-primary-soft text-primary font-bold px-4 py-1.5 rounded-full text-sm mb-4 inline-block">Save The Date</span>
+<h2 class="text-4xl lg:text-5xl font-extrabold text-text-heading dark:text-white mb-4">Thông Tin Buổi Tiệc</h2>
+<div class="flex justify-center items-center gap-2">
+<span class="w-3 h-3 rounded-full bg-primary/30"></span>
+<div class="h-1 w-20 bg-primary rounded-full"></div>
+<span class="w-3 h-3 rounded-full bg-primary/30"></span>
+</div>
+</div>
+<div class="relative bg-white dark:bg-gray-800 rounded-[3rem] shadow-soft border border-primary/5 p-2 overflow-hidden">
+<div class="absolute -top-6 -right-6 w-24 h-24 text-pastel-blue/80 rotate-12 z-20 opacity-80 pointer-events-none">
+<svg class="w-full h-full" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" viewBox="0 0 24 24">
+<circle cx="12" cy="12" r="9"></circle>
+<path d="M12 12L16.5 7.5"></path>
+<path d="M12 12L7.5 16.5"></path>
+<path d="M12 12L16.5 16.5"></path>
+<path d="M12 12L7.5 7.5"></path>
+</svg>
+</div>
+<div class="absolute -bottom-6 -left-6 w-24 h-24 text-secondary-pink/80 -rotate-12 z-20 opacity-80 pointer-events-none">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24">
+<path d="M18.5,8c-1.2-1.8-2.5-2.8-4.5-2.8C11.5,5.2,9.2,7,8.2,9.2l-4.9-3l-2,3.3l5.2,3.1c-0.2,0.9-0.2,1.9,0.1,2.8 l-5.2,3.1l2,3.3l4.9-3c1,2.2,3.3,4,5.8,4c2,0,3.3-1,4.5-2.8l3.1,5.2l3.3-2l-3-4.9c0.9-2,0.9-4.4-0.1-6.3l3-4.9l-3.3-2 L18.5,8z M14,16.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8c2.7,0,4.8,2.2,4.8,4.8C18.8,14.6,16.7,16.8,14,16.8z"></path>
+</svg>
+</div>
+<div class="absolute top-0 left-0 w-64 h-64 bg-secondary-pink rounded-full mix-blend-multiply filter blur-3xl opacity-50 -translate-x-1/2 -translate-y-1/2"></div>
+<div class="absolute bottom-0 right-0 w-64 h-64 bg-pastel-blue rounded-full mix-blend-multiply filter blur-3xl opacity-50 translate-x-1/2 translate-y-1/2"></div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-6 relative z-10">
+<div class="lg:col-span-5 p-8 lg:p-12 flex flex-col justify-center h-full">
+<div class="mb-6">
+<span class="inline-block p-3 rounded-2xl bg-primary-soft text-primary mb-4">
+<span class="material-symbols-outlined text-3xl">local_activity</span>
+</span>
+<h3 class="text-3xl font-bold text-text-heading dark:text-white mb-2">Lời Mời Thân Mật</h3>
+<p class="text-primary font-medium">Bé Mint tròn 1 tuổi!</p>
+</div>
+<p class="text-text-main dark:text-gray-300 leading-relaxed text-lg mb-8">
+                            Mời ông bà, cô chú và các bạn đến dự tiệc sinh nhật 1 tuổi của bé Mint. Sự hiện diện của mọi người là niềm hạnh phúc lớn nhất đối với gia đình chúng mình.
+                        </p>
+<div class="flex flex-col gap-4">
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-background-light dark:bg-white/5 border border-primary/10">
+<div class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/30 flex-shrink-0">
+<span class="material-symbols-outlined">calendar_today</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-wider font-bold">Thời gian</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">18:00 PM - 18/01/2026</p>
+</div>
+</div>
+<div class="flex items-center gap-4 p-4 rounded-2xl bg-background-light dark:bg-white/5 border border-primary/10">
+<div class="w-12 h-12 rounded-full bg-secondary-pink text-gray-800 flex items-center justify-center shadow-lg shadow-secondary-pink/30 flex-shrink-0">
+<span class="material-symbols-outlined">location_on</span>
+</div>
+<div>
+<p class="text-xs text-gray-500 uppercase tracking-wider font-bold">Địa điểm</p>
+<p class="text-lg font-bold text-gray-900 dark:text-white">Hà Nội, Vietnam</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 h-full min-h-[400px] lg:min-h-full">
+<div class="h-full w-full rounded-[2.5rem] overflow-hidden shadow-inner relative group">
+<iframe allowfullscreen="" class="w-full h-full absolute inset-0 filter grayscale-[20%] group-hover:grayscale-0 transition-all duration-500" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3724.0968141837753!2d105.78009387586523!3d21.028811887777176!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3135ab86cece9ac1%3A0xa9bc04e04602dd31!2sHanoi%2C%20Vietnam!5e0!3m2!1sen!2s!4v1714494448564!5m2!1sen!2s" style="border:0;"></iframe>
+<a class="absolute bottom-6 right-6 bg-white dark:bg-gray-800 text-gray-900 dark:text-white px-6 py-3 rounded-full font-bold shadow-xl hover:scale-105 transition-transform flex items-center gap-2 z-10 border border-gray-100 dark:border-gray-700" href="https://goo.gl/maps/xyz" target="_blank">
+<span>Chỉ đường</span>
+<span class="material-symbols-outlined text-primary">directions</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-16 bg-white dark:bg-white/5 overflow-hidden" id="gallery">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+<div class="relative">
+<h2 class="text-3xl font-extrabold text-text-heading dark:text-white">Khoảnh Khắc Đáng Yêu</h2>
+<p class="text-gray-500 mt-2">Hành trình lớn khôn của bé Mint qua những khung hình</p>
+<svg class="absolute -top-6 -left-6 w-10 h-10 text-pastel-green opacity-50 rotate-45" fill="currentColor" viewBox="0 0 24 24"><path d="M17,8C8,10 5.9,16.17 3.82,21.34L5.71,22L6.66,19.7C7.14,19.87 7.64,20 8,20C19,20 22,3 22,3C21,5 14,5.25 9,6.25C4,7.25 2,11.5 2,13.5C2,15.5 3.75,17.25 3.75,17.25C7,8 17,8 17,8Z"></path></svg>
+</div>
+<a class="text-primary font-bold hover:underline flex items-center gap-1" href="#">
+                        Xem tất cả ảnh <span class="material-symbols-outlined">arrow_forward</span>
+</a>
+</div>
+<div class="flex gap-6 overflow-x-auto pb-12 pt-4 px-4 snap-x snap-mandatory justify-start lg:justify-center no-scrollbar">
+<div class="tilt-card flex-shrink-0 w-72 h-80 bg-white p-3 rounded-2xl shadow-xl transition-all duration-300 snap-center border border-gray-100">
+<div class="w-full h-full rounded-xl overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB_MAEYYWmVXH8AO0Mvx90ChcR-wn0et7KLdEujWQdX2b64Z4p3lsJA3-G073sgWTX6mQ5vu9XrRbuT7aMB5ymZ91shAnuW-YO-xtsUyF0oeQrFb2VdkNz-LoVEEiVOq-WWhQ9eTbVDLgNfqpwPV-evXYNQg6bGE6Wr1nqfMVbHY80YV9jwmWzh8h3CwZBUrwNueQkXDnITkWPB8vJ_wsf_fgymF0jCMx1MpByy196fmNjBDubxpX6FQfrZy7vVfmwqUktWwR3Q5E8");'></div>
+</div>
+</div>
+<div class="tilt-card flex-shrink-0 w-72 h-80 bg-white p-3 rounded-2xl shadow-xl transition-all duration-300 snap-center border border-gray-100">
+<div class="w-full h-full rounded-xl overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCJR7PmU1bIwxwHvdIixy6hcw6eK3FnOTyGIwe0DX_D09xND0DtWxSUOhaUpW-Imjg7j_xSws7DCghJZaUOkWFppZgPZGiKNQLrgkaRxTt0hQ5KPj23e_TwiPcwhOImi-gN2tFWWGFbNAJCoQ3MCfFwQCo6fnQiDQL5JnDBZ5dD6_e3GCqOLBXCDSt2Ne-C5sy-mR06Uj5ymJBDKSRJ9PIYyNFXLuTUstGyeZHzXBxAKnCbxN5vVxg0tE51mO-_SDip6IBsdURaKp8");'></div>
+</div>
+</div>
+<div class="tilt-card flex-shrink-0 w-72 h-80 bg-white p-3 rounded-2xl shadow-xl transition-all duration-300 snap-center border border-gray-100">
+<div class="w-full h-full rounded-xl overflow-hidden relative">
+<div class="w-full h-full bg-cover bg-center" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC_WgeDP7YF7Z8Nkk0EB_YjnL--FmcnIhjdXoMXcBxAIoV-Pxcmhdd5gWLPtvjNTKK3bAYELWL02LvDBwoDmJ8P54Bs75VOgRxoBh_bO-LIQabWFjVY1IfvUVAOCZ1MRaHMrmB7JWXngBjHKjVJehDbmqFWqR5WFyHqOPRQsRO4rVT_nLD_iK3jVSbD7NoAykpw5YcnhC1ZK-U0UXEEr3rxiPzgxPF11ZGyKpz71eb16lkoD3YPspm7WGA04uLCR9qdxRLmU-w5xSs");'></div>
+</div>
+</div>
+<div class="tilt-card flex-shrink-0 w-72 h-80 bg-white p-3 rounded-2xl shadow-xl transition-all duration-300 snap-center border border-gray-100">
+<div class="w-full h-full rounded-xl bg-secondary-cream flex items-center justify-center flex-col text-primary">
+<span class="material-symbols-outlined text-4xl mb-2 text-yellow-500">collections</span>
+<span class="font-bold text-yellow-600">Xem thêm +50 ảnh</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="py-20 relative overflow-hidden" id="wishes">
+<div class="absolute -right-20 top-20 w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+<div class="max-w-3xl mx-auto px-4 relative z-10">
+<div class="bg-white dark:bg-gray-800 rounded-[2.5rem] p-8 md:p-12 shadow-2xl border border-primary/10 relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-full pointer-events-none z-0">
+<div class="absolute top-4 left-4 w-10 h-10 text-pastel-green/20 rotate-45">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24"><path d="M21,3c-4.2,0-10.8,2.9-12.8,9c-2.6-1-5.6-0.6-7.2,1c-1.6,1.6-1.8,4.6-0.6,7.2c-0.2,0.5-0.4,1-0.4,1.8 c0,1.1,0.9,2,2,2c0.6,0,1.1-0.2,1.5-0.5c2.6,1.2,5.7,1,7.3-0.6c1.6-1.6,2-4.6,1-7.2C18,13.7,21,7.1,21,3z M7.5,19.1 c-1.2-1.2-1.3-3.4-0.3-5.3l5.6,5.6C10.9,20.4,8.7,20.3,7.5,19.1z"></path></svg>
+</div>
+<div class="absolute top-1/2 right-4 w-12 h-12 text-pastel-purple/20 -rotate-12">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"></circle></svg>
+</div>
+<div class="absolute bottom-4 left-12 w-12 h-12 text-secondary-pink/20 rotate-12">
+<svg class="w-full h-full" fill="currentColor" viewBox="0 0 24 24"><path d="M18.5,8c-1.2-1.8-2.5-2.8-4.5-2.8C11.5,5.2,9.2,7,8.2,9.2l-4.9-3l-2,3.3l5.2,3.1c-0.2,0.9-0.2,1.9,0.1,2.8 l-5.2,3.1l2,3.3l4.9-3c1,2.2,3.3,4,5.8,4c2,0,3.3-1,4.5-2.8l3.1,5.2l3.3-2l-3-4.9c0.9-2,0.9-4.4-0.1-6.3l3-4.9l-3.3-2 L18.5,8z M14,16.8c-2.7,0-4.8-2.2-4.8-4.8c0-2.7,2.2-4.8,4.8-4.8c2.7,0,4.8,2.2,4.8,4.8C18.8,14.6,16.7,16.8,14,16.8z"></path></svg>
+</div>
+</div>
+<div class="text-center mb-10 relative z-10">
+<span class="material-symbols-outlined text-5xl text-primary mb-4">mail</span>
+<h2 class="text-3xl font-extrabold text-text-heading dark:text-white">Gửi Lời Chúc &amp; RSVP</h2>
+<p class="text-gray-500 mt-2">Hãy cho gia đình biết bạn sẽ tham dự nhé!</p>
+</div>
+<form class="space-y-6 relative z-10">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="space-y-2">
+<label class="text-sm font-bold text-text-heading dark:text-gray-300 ml-1">Tên của bạn</label>
+<input class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-gray-900 border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-primary text-gray-900 dark:text-white" placeholder="Nhập tên của bạn..." type="text"/>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-text-heading dark:text-gray-300 ml-1">Số lượng người</label>
+<select class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-gray-900 border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-primary text-gray-900 dark:text-white">
+<option>1 người lớn</option>
+<option>2 người lớn</option>
+<option>Gia đình (2 lớn + trẻ em)</option>
+<option>Không thể tham dự (Gửi lời chúc)</option>
+</select>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-sm font-bold text-text-heading dark:text-gray-300 ml-1">Lời chúc cho bé Mint</label>
+<textarea class="w-full px-5 py-4 rounded-xl bg-background-light dark:bg-gray-900 border-gray-200 dark:border-gray-700 focus:border-primary focus:ring-primary text-gray-900 dark:text-white resize-none" placeholder="Viết lời chúc đáng yêu..." rows="4"></textarea>
+</div>
+<button class="w-full bg-primary hover:bg-primary-hover text-white font-bold py-5 rounded-xl shadow-lg shadow-primary/20 transition-transform active:scale-[0.98]" type="button">
+                            Gửi Xác Nhận
+                        </button>
+</form>
+</div>
+</div>
+<div class="max-w-6xl mx-auto px-4 mt-24 relative z-10">
+<div class="text-center mb-12">
+<h3 class="text-3xl font-bold font-cute text-text-heading dark:text-white mb-2">Những Lời Chúc Yêu Thương</h3>
+<p class="text-gray-500 font-cute text-lg">Dành tặng bé Mint 💕</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-gradient-to-br from-white to-blue-50 dark:from-gray-800 dark:to-gray-800 p-6 rounded-[2rem] shadow-sm border border-blue-100 dark:border-white/5 hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-blue-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-pastel-blue text-blue-600 flex items-center justify-center font-bold text-xl shadow-inner shrink-0 rotate-3">H</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-text-heading dark:text-white font-cute text-lg">Cô Hương Giang</h4>
+<span class="text-xs bg-white/50 px-2 py-1 rounded-lg text-blue-600 font-bold">Family</span>
+</div>
+<p class="text-text-main dark:text-gray-300 text-base mt-2 font-cute leading-relaxed">
+                                    "Chúc bé Mint hay ăn chóng lớn, luôn vui vẻ và ngoan ngoãn nhé! Yêu con nhiều ❤️"
+                                </p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-white to-yellow-50 dark:from-gray-800 dark:to-gray-800 p-6 rounded-[2rem] shadow-sm border border-yellow-100 dark:border-white/5 hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-yellow-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-pastel-yellow text-yellow-600 flex items-center justify-center font-bold text-xl shadow-inner shrink-0 -rotate-2">T</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-text-heading dark:text-white font-cute text-lg">Chú Tuấn Anh</h4>
+<span class="text-xs bg-white/50 px-2 py-1 rounded-lg text-yellow-600 font-bold">Friend</span>
+</div>
+<p class="text-text-main dark:text-gray-300 text-base mt-2 font-cute leading-relaxed">
+                                    "Happy 1st Birthday Mint! Mong con một đời an nhiên, hạnh phúc. 🎂🎁"
+                                </p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-white to-purple-50 dark:from-gray-800 dark:to-gray-800 p-6 rounded-[2rem] shadow-sm border border-purple-100 dark:border-white/5 hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-purple-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-pastel-purple text-purple-600 flex items-center justify-center font-bold text-xl shadow-inner shrink-0 rotate-1">L</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-text-heading dark:text-white font-cute text-lg">Gia đình Bác Linh</h4>
+<span class="text-xs bg-white/50 px-2 py-1 rounded-lg text-purple-600 font-bold">Family</span>
+</div>
+<p class="text-text-main dark:text-gray-300 text-base mt-2 font-cute leading-relaxed">
+                                    "Sinh nhật vui vẻ nhé công chúa nhỏ. Hẹn gặp con vào ngày tiệc nha! ✨"
+                                </p>
+</div>
+</div>
+</div>
+<div class="bg-gradient-to-br from-white to-pink-50 dark:from-gray-800 dark:to-gray-800 p-6 rounded-[2rem] shadow-sm border border-pink-100 dark:border-white/5 hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="absolute -right-4 -top-4 w-20 h-20 bg-pink-100 rounded-full blur-2xl opacity-50 group-hover:opacity-100 transition-opacity"></div>
+<div class="flex items-start gap-4 relative z-10">
+<div class="w-12 h-12 rounded-2xl bg-secondary-pink text-red-400 flex items-center justify-center font-bold text-xl shadow-inner shrink-0 -rotate-3">M</div>
+<div class="flex-1">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-text-heading dark:text-white font-cute text-lg">Mẹ yêu</h4>
+<span class="text-xs bg-white/50 px-2 py-1 rounded-lg text-red-400 font-bold">Mom</span>
+</div>
+<p class="text-text-main dark:text-gray-300 text-base mt-2 font-cute leading-relaxed">
+                                    "Yêu con gái của mẹ nhất trên đời. Cảm ơn con đã đến bên bố mẹ. 💖"
+                                </p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<footer class="bg-pastel-blue/30 dark:bg-black/20 border-t border-primary/10 py-10 mt-10">
+<div class="max-w-7xl mx-auto px-4 flex flex-col items-center gap-4">
+<div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary mb-2 animate-pulse">
+<span class="material-symbols-outlined">favorite</span>
+</div>
+<p class="text-center text-gray-500 text-sm">
+                Cảm ơn bạn đã là một phần trong hành trình lớn khôn của bé Mint.<br/>
+                With love, Gia đình Mint.
+            </p>
+<div class="flex gap-4 mt-2">
+<a class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors text-xs font-bold" href="#">
+                    FB
+                </a>
+<a class="w-10 h-10 rounded-full bg-white shadow-sm flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors text-xs font-bold" href="#">
+                    IG
+                </a>
+</div>
+</div>
+</footer>
+
+</body></html>

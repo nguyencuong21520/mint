@@ -1,0 +1,24 @@
+        .bg-dots {
+            background-image: radial-gradient(#89CFF0 1px, transparent 1px);
+            background-size: 24px 24px;
+            opacity: 0.3;
+        }
+        .tilt-card:nth-child(odd) {
+            transform: rotate(-2deg);
+        }
+        .tilt-card:nth-child(even) {
+            transform: rotate(2deg);
+        }
+        .tilt-card:hover {
+            transform: scale(1.05) rotate(0deg);
+            z-index: 10;
+        }
+        .blob-shape {
+            border-radius: 42% 58% 70% 30% / 45% 45% 55% 55%;
+        }@keyframes float {
+            0%, 100% { transform: translateY(0) rotate(0deg); }
+            50% { transform: translateY(-10px) rotate(5deg); }
+        }
+        .animate-float {
+            animation: float 5s ease-in-out infinite;
+        }
